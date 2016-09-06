@@ -6,9 +6,7 @@ body {
    src:           url(assets/fonts/raley.woff2);
 }
 
-#header-cont {
-}
-
+#header-cont {}
 #header-top-info {
    color:               white;
    height:              44px;
@@ -45,6 +43,7 @@ body {
 #line-after-logo {
    color:               #eee;
    opacity:             0.5;
+   margin-bottom:       2px;
 }
 
 #top-nav-container {
@@ -55,20 +54,36 @@ body {
    position:            absolute;
    left:                50%;
    transform:           translateX(-50%);
-   /*margin:              0 auto;
+   padding-top:         5px;
+ /*margin:              0 auto;
    display:             inline-block;*/
 }
 
 .nav-item {
    display:             inline;
-   padding-left:        20px;
-   padding-right:       20px;
+   /*margin-left:         25px;
+   margin-right:        25px;*/
+   padding-left:        25px;
+   padding-right:       25px;
+   padding-top:         5px;
    font-family:         "Raleyway";
    font-style:          normal;
    font-weight:         300;
 }
+.nav-item:hover {
+   cursor:              pointer;
+   color:               #69bd27;
+   border-style:        solid;
+   border-width:        0;
+   border-top-width:    4px;
 
-.nav-item-selected {
+}
+
+.nav-item-active {
+   color:               #69bd27;
+   border-style:        solid;
+   border-width:        0;
+   border-top-width:    4px;
 }
 
 
