@@ -13,6 +13,13 @@ function fixNavWidth() {
    $('#top-nav').css('width', navWidth + 'px');
 }
 
+function selectPage(name) {
+   $('.nav-item').each(function() {
+      if ($(this).text().trim() == name)
+         $(this).addClass('nav-item-active');
+   });
+}
+
 $(document).ready(function() {
    $('#family-cape-logo').click(function() {
       window.location = 'http://familycape.com/';
@@ -21,8 +28,4 @@ $(document).ready(function() {
    //TODO: fixme and use static width
    setTimeout(fixNavWidth, 50);
 
-   $('.nav-item').each(function() {
-      if ($(this).text().trim() == 'Home')
-         $(this).addClass('nav-item-active');
-   });
 });

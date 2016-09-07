@@ -107,9 +107,12 @@
       }
    </script>
 </head>
-<body>
+<body style='overflow:hidden'>
    <!-- {{ header | safe }} -->
    {% include "header.html" %}
+   <script>selectPage("Home")</script>
+
+   </br></br>
 
     <div class="slideshow-container">
      <div class="mySlides fade">
@@ -143,6 +146,8 @@
      <span class="dot" onclick="currentSlide(2)"></span>
      <span class="dot" onclick="currentSlide(3)"></span>
    </div>
+
+   {% include "footer.html" %}
 
 </body>
 </html>

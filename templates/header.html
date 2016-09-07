@@ -1,7 +1,7 @@
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
-<script src='static-nginx/header.js'></script>
+<script src='{{ static }}/header.js'></script>
 
-<link rel='stylesheet' type='text/css' href='static-nginx/header.css'>
+<link rel='stylesheet' type='text/css' href='{{ static }}/header.css'>
 
 <div id='header-cont'>
    <div id='header-top-info'>
@@ -12,27 +12,27 @@
    </div>
 
    <div id='family-cape-logo-container'>
-      <img id='family-cape-logo' src="static-nginx/assets/familycape/logo.png" alt="Family CAPE"/>
+      <img id='family-cape-logo' src="{{ static }}/assets/familycape/logo.png" alt="Family CAPE"/>
    </div>
 
    <hr id='line-after-logo'>
 
    <div id='top-nav-container'>
       <nav id='top-nav'>
-         <a class='nav-item'>
+         <a class='nav-item' href='{{root}}index'>
             Home
          </a>
-         <a class='nav-item'>
+         <a class='nav-item' href='{{root}}resources'>
             Resources
          </a>
-         <a class='nav-item'>
+         <a class='nav-item' href='{{root}}blog'>
             Blog
          </a>
-         <a class='nav-item'>
+         <a class='nav-item' href='{{root}}about'>
             About
          </a>
-         <a class='nav-item'>
-            Content
+         <a class='nav-item' href='{{root}}contact'>
+            Contact
          </a>
       </nav>
    </div>

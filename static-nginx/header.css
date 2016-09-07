@@ -1,6 +1,12 @@
 body {
    margin:  0;
 }
+a, a:link, a:visited, a:hover {
+   text-decoration:     none;
+   color:               black;
+   border-color:        #69bd27;
+}
+
 @font-face {
    font-family:   "Raleyway";
    src:           url(assets/fonts/raley.woff2);
