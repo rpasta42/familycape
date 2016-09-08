@@ -1,5 +1,24 @@
 
 /* start slideshow */
+#freedom-slide-text {
+   font-size:     120%;
+   text-align:    center;
+   color:         white;
+}
+
+
+#finance-slide2-line-chart {
+   background-color:    #00527b;
+   width:               250px;
+   height:              200px;
+   color:               white;
+   text-align:          center;
+   vertical-align:      middle;
+   padding-top:         50px;
+   font-size:           150px;
+   border-radius:       50%;
+}
+
 /* end slideshow */
 
 

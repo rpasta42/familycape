@@ -54,7 +54,8 @@
    position:      relative;
 }
 .numbertext {
-   color:         /*#f2f2f2;*/ #999;
+   color:         #f2f2f2; /*#999;*/
+   padding-bottom:15px;
    font-size:     12px;
    /*padding:       8px 12px;*/
    /*top:           0;*/
@@ -63,12 +64,14 @@
    position:      absolute;
    left:          50%;
    transform      translateX(-50%);
+   top:           -10px;
+   z-index:       5;
    /*height:        20%;*/
 }
 .slide-img {
    height:        200px; /* TODO: make this dynamic */
    /*margin:        auto;*/
-   top:           10px;
+   top:           55px;
    position:      absolute;
    left:          50%;
    transform:     translateX(-50%);
