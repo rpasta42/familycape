@@ -7,7 +7,7 @@
    position:      fixed;
    /*position:      absolute;*/
    /*position:      relative;*/
-   bottom:        0;
+   bottom:        0; /*!important;*/
    width:         100%;
    text-align:    center;
 }

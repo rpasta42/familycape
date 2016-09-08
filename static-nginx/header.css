@@ -1,6 +1,7 @@
 body {
    margin:              0;
    overflow-x:          hidden;
+   overflow-y:          scroll;
 }
 a, a:link, a:visited, a:hover {
    text-decoration:     none;

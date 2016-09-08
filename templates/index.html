@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel='stylesheet' type='text/css' href='{{ static }}/noscrolled.css'>
+
    <style>
        /* Slideshow container */
       .slideshow-container {
@@ -107,7 +109,7 @@
       }
    </script>
 </head>
-<body style='overflow:hidden'>
+<body>
    <!-- {{ header | safe }} -->
    {% include "header.html" %}
    <script>selectPage("Home")</script>
