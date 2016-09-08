@@ -33,27 +33,37 @@ $(document).ready(function() {
    setTimeout(fixNavWidth, 500);
 
    function onScroll() {
-      if (!($('#page-content').height() > window.innerWidth)) {
+      /*if (!($('#page-content').height() > window.innerWidth)) {
          $('#footer').css('position', 'absolute');
          $('#footer').css('bottom', '0px');
          $('#footer').show();
+      }
+      else
+         $('#footer').hide();*/
+      //$(window).scrollTop() = top part of scroll bar
+      //window.innerHeight = viewport height
+      var scrollBottom = $(window).scrollTop() + window.innerHeight;
+      var scrollBottomFoot = scrollBottom + $('#footer').height();
+
+      if ($(window).height() < scrollBottomFoot) {
+         $('#footer').show();
+         var footerBottom = (scrollBottom - $('body').height());
+         //footerBottom = $('#footer').height() - footerBottom;
+         console.log(footerBottom);
+         $('#footer').css('bottom', footerBottom + 'px');
       }
       else
          $('#footer').hide();
    }
    $('body').scroll(onScroll);
 
-   var periodicDelay = 1000;
+   var periodicDelay = 70;
    function periodic() {
-      //console.log('scrollTop' + ($('body').scrollTop() + $('body').height()));
-      var pc = $('#page-content');
-      //console.log('scroll' + ($(pc).scrollTop() + $(pc).height()));
-      //console.log('scroll' + ($('body').scrollTop() + $(window).height()));
-      //console.log('scroll' + ($(document).height() - $(pc).scrollTop() - $(pc).height()));
-      console.log($(window).scrollTop() + window.innerHeight); //$(window).height());
-      console.log('height' + $(window).height()); //$('body').height());
-      setTimeout(periodic, periodicDelay);
+      //var pc = $('#page-content');
+      //console.log($(window).scrollTop() + window.innerHeight); //$(window).height());
+      //console.log('height' + $(window).height()); //$('body').height());
       onScroll();
+      setTimeout(periodic, periodicDelay);
    }
    periodic();
 
