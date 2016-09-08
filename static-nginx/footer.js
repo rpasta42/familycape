@@ -28,7 +28,7 @@ $(function() {
          $('#footer').css('bottom', '0px');
       }
    }
-   $('body').scroll(onScroll);
+   //$('body').scroll(onScroll);
 
    function periodic() {
       //var pc = $('#page-content');
@@ -37,5 +37,6 @@ $(function() {
       onScroll();
       setTimeout(periodic, periodicDelay);
    }
-   periodic();
+   //periodic();
 });
+
