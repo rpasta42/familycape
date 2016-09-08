@@ -4,7 +4,9 @@
    font-size:     90%;
    height:        60px;
    color:         white;
-   position:      absolute;
+   /*position:      fixed;*/
+   /*position:      absolute;*/
+   position:      relative;
    bottom:        0;
    width:         100%;
    text-align:    center;

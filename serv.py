@@ -1,5 +1,5 @@
 from flask import Flask, session, redirect, url_for, escape, request, render_template, send_from_directory
-
+import user_agents
 app = Flask(__name__)
 
 APP_ROOT='/'
@@ -9,11 +9,20 @@ STATIC_NGINX = DOMAIN + 'static-nginx'
 #with open('dynamic/header.html', 'r') as f:
 #   header_code = f.read()
 
+def mobile(func):
+   def func_wrapper(*args, **kwargs):
+      agent_str = request.headers.get('User-Agent')
+      agent_parsed = user_agents.parse(agent_str)
+      is_mobile = agent_parsed.is_mobile
+      return func(is_mobile=is_mobile, *args, **kwargs)
+   return func_wrapper
 
 @app.route(APP_ROOT, strict_slashes=False)
 @app.route(APP_ROOT + 'index', strict_slashes=False)
 @app.route(APP_ROOT + 'index.html', strict_slashes=False)
-def index():
+@mobile
+def index(is_mobile):
+   print(is_mobile)
    return render_template('index.html',
                           static=STATIC_NGINX,
                           root=DOMAIN)
@@ -21,6 +30,7 @@ def index():
 
 @app.route(APP_ROOT + 'contact', strict_slashes=False)
 @app.route(APP_ROOT + 'contact.html', strict_slashes=False)
+#@mobile
 def contact():
    return render_template('contact.html',
                           static=STATIC_NGINX,
