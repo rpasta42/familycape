@@ -4,7 +4,7 @@ $(function() {
    function onScroll() {
       //console.log(document.body.scrollHeight);
       //console.log(document.body.clientHeight);
-      console.log(periodicDelay);
+      //console.log(periodicDelay);
       var doBigPageScroll = document.body.scrollHeight > document.body.clientHeight;
       //console.log(doBigPageScroll);
       if (doBigPageScroll) {
