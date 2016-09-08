@@ -19,6 +19,16 @@ a, a:link, a:visited, a:hover {
    src:           url(assets/fonts/SortsMillGoudy.woff2);
 }
 
+@font-face {
+   font-family:   "Lato";
+   src:           url(assets/fonts/lato.woff2);
+}
+
+@font-face {
+   font-family:   "Lato Light";
+   src:           url(assets/fonts/lato.woff2);
+   font-weight:   20;
+}
 #header-cont {}
 #header-top-info {
    color:               white;
@@ -59,6 +69,11 @@ a, a:link, a:visited, a:hover {
    opacity:             0.5;
    margin-bottom:       2px;
 }
+#line-after-nav {
+   margin-top:          35px;
+   color:               #eee;
+   opacity:             0.5;
+}
 
 #top-nav-container {
    width:               100%;
@@ -90,7 +105,6 @@ a, a:link, a:visited, a:hover {
    border-style:        solid;
    border-width:        0;
    border-top-width:    4px;
-
 }
 
 .nav-item-active {

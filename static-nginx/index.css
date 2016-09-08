@@ -27,13 +27,57 @@
    position:            relative;
 }
 
-#featured-in-text {
-   padding-left:        20px;
-   font-size:           140%;
-   color:               white;
+#featured-in-text, #featured-img1, #featured-img2 {
    position:            absolute;
    top:                 50%;
    transform:           translateY(-50%);
+}
+#featured-img1, #featured-img2 {
+   height:              45px;
+}
+#featured-in-text {
+   padding-left:        20px;
+   padding-right:       30px;
+   font-size:           140%;
+   color:               white;
    font-family:         "Sorts Mill Goudy";
    font-style:          normal;
+   /*display:             inline;*/
 }
+#featured-img1 { left: 25%; }
+#featured-img2 { left: 55%; }
+
+
+#vid-n-text {
+   position:absolute;
+   height:  100%;
+   width:   100%;
+}
+#bottom-video {
+   width:         45%;
+   padding-left:  15px;
+   float:         left;
+}
+#bottom-text {
+   width:         49%;
+   float:         right;
+   font-style:    normal;
+   font-weight:   400;
+   font-family:   "Lato";
+   color:         #747474;
+}
+#bottom-text-title {
+}
+#bottom-text-p1, #bottom-text-p2 {
+   /*padding-top:   10px;
+   padding-bottom:10px;*/
+   padding:       10px;
+   padding-left:  0;
+   font-family:   "Lato Light";
+   font-style:    light;
+   font-weight:   10 !important;
+   font-size:     90%;
+}
+
+
+

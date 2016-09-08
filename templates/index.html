@@ -2,7 +2,7 @@
 <html>
 <head>
    <title>Family Cape</title>
-   <link rel='stylesheet' type='text/css' href='{{ static }}/noscrolled.css'>
+   <!-- <link rel='stylesheet' type='text/css' href='{{ static }}/noscrolled.css'> -->
    <link rel='stylesheet' type='text/css' href='{{ static }}/index.css'>
 </head>
 <body>
@@ -56,11 +56,32 @@
         <span class="dot" onclick="currentSlide(3)"></span>
       </div>
    </div>
+
    <div id='div-featured-in'>
-      <!-- <a id='featured-in-text'>Featured In:</a> -->
+      <a id='featured-in-text'>Featured In:</a>
+      <img id='featured-img1' src='{{static}}/assets/familycape/usf-white-logo.png'>
+      <img id='featured-img2' src='{{static}}/assets/familycape/accurate-advisory-group.png'>
    </div>
 
-   </br>
+   </br></br>
+
+   <div id='vid-n-text'>
+      <iframe id='bottom-video' width="420" height="245" src="https://www.youtube.com/embed/Dg5RRMAc1GY" frameborder="0" allowfullscreen></iframe>
+
+      <div id='bottom-text'>
+         <div id='bottom-text-title'>
+            Investment Advisor vs Registered Broker – What’s the Difference?
+         </div>
+         <div id='bottom-text-p1'>
+            Did you know that not all financial advisors have your best interest in mind?  It’s true!  Under the current laws, financial professionals can operate under what’s called the “suitability standard”, which means they are only required to make sure that the investments and/or products they recommend are “suitable” for the client… they’re not required to offer opinions on whether or not it’s truly the best option.
+         </div>
+         <div id='bottom-text-p2'>
+            I operate as a Wesley Chapel Investment Advisor, and so I am held to the “fiduciary standard”, which means that I advise my clients with full transparency and avoid conflicts of interest.  Fiduciary professionals have a duty to keep their client’s best interest in focus at all times, and work to ensure that all the investments and products that are a part of the client’s financial strategy are truly the best options available for the client’s situation and goals.
+         </div>
+      </div>
+   </div>
+
+   </br></br></br></br></br></br>
 
    {% include "footer.html" %}
 </body>

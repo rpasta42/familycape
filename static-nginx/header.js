@@ -31,7 +31,6 @@ $(document).ready(function() {
    setTimeout(fixNavWidth, 100);
    setTimeout(fixNavWidth, 200);
    setTimeout(fixNavWidth, 500);
-   setTimeout(fixNavWidth, 1000);
 
 });
 
