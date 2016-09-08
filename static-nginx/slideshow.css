@@ -1,6 +1,11 @@
 
-/* Slideshow container */
 .slideshow-container {
+   background-color:#999;
+}
+
+/* Slideshow container */
+.slides-container {
+   height:        500px;
    max-width:     1000px;
    margin:        0 auto;
    margin-left:   none;
@@ -10,7 +15,7 @@
    transform:     translateX(-50%);*/
 }
 /* Next & previous buttons */
-.prev, .next {
+.prev-slide, .next-slide {
    cursor:        pointer;
    position:      absolute;
    top:           0;
@@ -25,17 +30,17 @@
    border-radius: 0 3px 3px 0;
 }
 /* Position the "next button" to the right */
-.next {
+.next-slide {
    right: 0;
    border-radius: 3px 0 0 3px;
 }
-.slideshow-container:hover {}
+.slides-container:hover {}
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+.prev-slide:hover, .next-slide:hover {
    background-color: rgba(0,0,0,0.8);
 }
 /* Caption text */
-.text {
+.caption-text {
    color: #f2f2f2;
    font-size: 15px;
    padding: 8px 12px;
@@ -45,17 +50,28 @@
    text-align: center;
 }
 /* Number text (1/3 etc) */
+.mySlides {
+   position:      relative;
+}
 .numbertext {
-   color:         #f2f2f2;
+   color:         /*#f2f2f2;*/ #999;
    font-size:     12px;
-   padding:       8px 12px;
+   /*padding:       8px 12px;*/
+   /*top:           0;*/
+   height:        40px;
+   width:         40px;
    position:      absolute;
-   top:           0;
-   height:        20%;
+   left:          50%;
+   transform      translateX(-50%);
+   /*height:        20%;*/
 }
 .slide-img {
-   height:        200px;
-   margin:        auto;
+   height:        200px; /* TODO: make this dynamic */
+   /*margin:        auto;*/
+   top:           10px;
+   position:      absolute;
+   left:          50%;
+   transform:     translateX(-50%);
 }
 /* The dots/bullets/indicators */
 .dot {
@@ -86,8 +102,6 @@
    from {opacity: .4}
    to {opacity: 1}
 }
-
-
 
 
 
