@@ -21,4 +21,19 @@
 
 /* end slideshow */
 
+#div-featured-in {
+   height:              75px;
+   background-color:    #00527B;
+   position:            relative;
+}
 
+#featured-in-text {
+   padding-left:        20px;
+   font-size:           140%;
+   color:               white;
+   position:            absolute;
+   top:                 50%;
+   transform:           translateY(-50%);
+   font-family:         "Sorts Mill Goudy";
+   font-style:          normal;
+}
