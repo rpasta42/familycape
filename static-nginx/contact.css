@@ -1,4 +1,16 @@
+#right-pane {
+   top:           100px;
+   float:         right;
+}
+#contact-content {
+   float:         left;
+   width:         50%;
+}
 
+#feedback-form {
+   width:         50%;
+   padding:       20px;
+}
 
 #wanna-hear {
    padding-top:   15px;
@@ -17,9 +29,7 @@
    font-weight:   bold;
    padding-bottom:25px;
 }
-#contact-info-text {
-
-}
+#contact-info-text {}
 
 #contact-intro {
    font-family:   Merriweather;
@@ -37,20 +47,26 @@
    padding:       12px;
 }
 
-#form-first {
+#form-first-name {
    border-top-right-radius: 4px;
 }
-#form-last {
+#form-last-name {
    border-top-right-radius: 0px;
 }
 
+#feedback-form {
+   width:         90%;
+}
+
+#form-email-label, #form-name-label, #form-phone-label, #form-msg-label {
+   width:         33%;
+}
+
 #form-msg {
-   height:        10em;
+   height:        7em;
 }
-#form-name {
-   width:         19%;
-}
-#form-email-group, #form-first-last-group, #form-phone-group {
+
+#form-email-group, #form-phone-group, #form-name-group, #form-msg-group {
    width:         70%;
 }
 
@@ -62,6 +78,14 @@
    display:       inline-block;
 }
 
-#form-last, #form-first {
-   width:   100px;
+/*#form-first-last-group {
+   width:         100%;
 }
+#form-last, #form-first {
+   width:         35%;
+}
+.form-err {
+   width:         30%;
+}*/
+
+

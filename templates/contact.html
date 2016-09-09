@@ -3,7 +3,7 @@
    <link rel='stylesheet' type='text/css' href='{{ static }}/contact.css'>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+   <title>Contact Page - Family Cape</title>
 </head>
 <body>
    {% include "header.html" %}
@@ -25,45 +25,48 @@
       </div>
 
       <form id='feedback-form'>
-         <div class='input-group' id='form-first-last-group'>
-            <span class='input-group-addon' id='form-name'>Name*</span>
+         <center>
+         <div class='input-group' id='form-name-group'>
+            <span class='input-group-addon' id='form-name-label'>Name*</span>
             <input type="text" class="form-control" placeholder="First"
-                   id='form-first'
+                   id='form-first-name'
                    aria-describedby='form-name'>
-            <div class='input-group'>
-            <input id='form-last'
-                   type="text" class="form-control" placeholder="Last"
+            <input id='form-last-name' type='text'
+                   class='form-control' placeholder='Last'
                    aria-describedby='form-name'>
-
-            <span id='form-first-err' class='input-group-addon'>Err</span>
-            </div>
-            <span id='form-first-err' class='input-group-addon'>Err</span>
-
+            <!-- <span id='form-first-err' class='form-err input-group-addon'>Error</span> -->
          </div>
 
          <div class='input-group' id='form-email-group'>
-            <span class='input-group-addon' id='form-email-desc'>
+            <span class='input-group-addon' id='form-email-label'>
                Email*
             </span>
             <input id='form-email' class='form-control'
-                   aria-describedby='form-email-desc'
+                   aria-describedby='form-email-label'
                    type='email' placeholder='example@example.com'>
          </div>
 
          <div class='input-group' id='form-phone-group'>
-            <span class='input-group-addon'>Phone Number</span>
-            <input id='form-phone' type='text' class='form-control'>
+            <span class='input-group-addon' id='form-phone-label'>
+               Phone
+            </span>
+            <input id='form-phone' type='text' class='form-control'
+                   placeholder='Enter Phone Number'>
          </div>
 
-         <div class='input-group'>
-            <span class='input-group-addon'>Message*</span>
+         <div class='input-group' id='form-msg-group'>
+            <span id='form-msg-label' class='input-group-addon'>
+               Message*
+            </span>
             <textarea id='form-msg' class='form-control'
                       placeholder='Your message'>
             </textarea>
          </div>
 
-
-         <button type='submit' class='btn btn-primary' id='form-submit-btn'>Submit</button>
+         <button type='submit' class='btn btn-primary' id='form-submit-btn'>
+            Submit
+         </button>
+         </center>
 
       </form>
       <!-- <div class="fusion-fullwidth fullwidth-box fusion-fullwidth-1  fusion-parallax-none nonhundred-percent-fullwidth" style="border-color:#eae9e9;border-bottom-width: 0px;border-top-width: 0px;border-bottom-style: solid;border-top-style: solid;padding-bottom:20px;padding-top:20px;padding-left:35px;padding-right:35px;background-color:rgba(255,255,255,0);"><div class="fusion-row"><div class="fusion-title title fusion-title-size-one" style="margin-top:0px;margin-bottom:10px;"><h1 style="" data-lineheight="38" data-fontsize="32" class="title-heading-left">We Want to Hear From You!</h1><div class="title-sep-container"><div class="title-sep sep-double"></div></div></div><div class="fusion-three-fourth fusion-layout-column fusion-spacing-yes" style="margin-top:10px;margin-bottom:10px;"><div class="fusion-column-wrapper"><p><strong>We’ll be happy to answer your questions directly, or refer you to one of our consultants.</strong></p>
@@ -648,6 +651,10 @@
          .fusion-testimonials.clean.fusion-testimonials-1 .author:after{border-top-color:#f6f6f6 !important;}</style><div class="reviews"><div style="display: block;" class="review male"><div class="testimonial-thumbnail doe" style="color:#747474;"></div><blockquote style="background-color:#f6f6f6;"><q style="background-color:#f6f6f6;color:#747474;">“Business CAPE has provided so much value to our company! Some of their findings offered us substantial savings opportunities, and everything they did impacted our bottom line tremendously.”</q></blockquote><div class="author" style="color:#747474;"><span class="company-name"><strong>- Hotel Owner in Michigan</strong></span></div></div></div><div class="testimonial-pagination" id="fusion-testimonials-1"></div></div><div class="fusion-clearfix"></div></div></div><div class="fusion-clearfix"></div></div></div>
       --!>
 
+   </div>
+
+   <div id='right-pane'>
+      Steps to get started
    </div>
 
    <div id='placeholder' style='height:200px;width:100px;'>&nbsp;</div>
