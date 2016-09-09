@@ -1,6 +1,7 @@
 
 .slideshow-container {
    background-color:#999;
+   position:      relative;
 }
 
 /* Slideshow container */

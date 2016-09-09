@@ -34,7 +34,7 @@
    height:              45px;
 }
 #featured-in-text {
-   padding-left:        20px;
+   padding-left:        70px;
    padding-right:       30px;
    font-size:           140%;
    color:               white;
@@ -48,13 +48,23 @@
 
 #vid-n-text {
    position:absolute;
-   height:  45%;
+   z-index: 10;
    width:   100%;
 }
+#vid-n-text-placeholder {
+   z-index: -10;
+   height:  100;
+   padding-bottom:      60px;
+}
+
 #bottom-video {
    width:         45%;
+   /*width:         510px;*/
+   min-width:     300px;
    padding-left:  15px;
    float:         left;
+   text-align:    center;
+   padding-bottom:40px;
 }
 #bottom-text {
    width:         49%;

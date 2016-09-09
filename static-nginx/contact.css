@@ -10,6 +10,7 @@
 
 #contact-content {
    margin:        20px;
+   position:      relative;
 }
 
 #contact-info-bold {
@@ -24,4 +25,43 @@
    font-family:   Merriweather;
    font-weight:   20;
    color:         #595959;
+}
+
+#feedback-form {
+   /*position:      absolute;*/
+   width:         50%;
+   padding:       20px;
+}
+
+.input-group {
+   padding:       12px;
+}
+
+#form-first {
+   border-top-right-radius: 4px;
+}
+#form-last {
+   border-top-right-radius: 0px;
+}
+
+#form-msg {
+   height:        10em;
+}
+#form-name {
+   width:         19%;
+}
+#form-email-group, #form-first-last-group, #form-phone-group {
+   width:         70%;
+}
+
+#form-submit-btn {
+   margin-left:   15px;
+}
+
+#form-first-err {
+   display:       inline-block;
+}
+
+#form-last, #form-first {
+   width:   100px;
 }

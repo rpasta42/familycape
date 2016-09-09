@@ -1,6 +1,8 @@
 <html>
 <head>
    <link rel='stylesheet' type='text/css' href='{{ static }}/contact.css'>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -22,8 +24,48 @@
          </div>
       </div>
 
+      <form id='feedback-form'>
+         <div class='input-group' id='form-first-last-group'>
+            <span class='input-group-addon' id='form-name'>Name*</span>
+            <input type="text" class="form-control" placeholder="First"
+                   id='form-first'
+                   aria-describedby='form-name'>
+            <div class='input-group'>
+            <input id='form-last'
+                   type="text" class="form-control" placeholder="Last"
+                   aria-describedby='form-name'>
+
+            <span id='form-first-err' class='input-group-addon'>Err</span>
+            </div>
+            <span id='form-first-err' class='input-group-addon'>Err</span>
+
+         </div>
+
+         <div class='input-group' id='form-email-group'>
+            <span class='input-group-addon' id='form-email-desc'>
+               Email*
+            </span>
+            <input id='form-email' class='form-control'
+                   aria-describedby='form-email-desc'
+                   type='email' placeholder='example@example.com'>
+         </div>
+
+         <div class='input-group' id='form-phone-group'>
+            <span class='input-group-addon'>Phone Number</span>
+            <input id='form-phone' type='text' class='form-control'>
+         </div>
+
+         <div class='input-group'>
+            <span class='input-group-addon'>Message*</span>
+            <textarea id='form-msg' class='form-control'
+                      placeholder='Your message'>
+            </textarea>
+         </div>
 
 
+         <button type='submit' class='btn btn-primary' id='form-submit-btn'>Submit</button>
+
+      </form>
       <!-- <div class="fusion-fullwidth fullwidth-box fusion-fullwidth-1  fusion-parallax-none nonhundred-percent-fullwidth" style="border-color:#eae9e9;border-bottom-width: 0px;border-top-width: 0px;border-bottom-style: solid;border-top-style: solid;padding-bottom:20px;padding-top:20px;padding-left:35px;padding-right:35px;background-color:rgba(255,255,255,0);"><div class="fusion-row"><div class="fusion-title title fusion-title-size-one" style="margin-top:0px;margin-bottom:10px;"><h1 style="" data-lineheight="38" data-fontsize="32" class="title-heading-left">We Want to Hear From You!</h1><div class="title-sep-container"><div class="title-sep sep-double"></div></div></div><div class="fusion-three-fourth fusion-layout-column fusion-spacing-yes" style="margin-top:10px;margin-bottom:10px;"><div class="fusion-column-wrapper"><p><strong>We’ll be happy to answer your questions directly, or refer you to one of our consultants.</strong></p>
 
       <p>We have Agents in all 50 states and will be glad to direct you to the Agent closest to you. &nbsp;If you have questions in regard to obtaining a savings analysis for your company, or if you’d like to have a local Business CAPE consultant&nbsp;reach out to you directly, please complete the form below and we will direct your message to the appropriate department promptly.</p>
@@ -607,6 +649,8 @@
       --!>
 
    </div>
+
+   <div id='placeholder' style='height:200px;width:100px;'>&nbsp;</div>
 
    {% include "footer.html" %}
 
