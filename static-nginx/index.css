@@ -1,20 +1,59 @@
+/*#slide1 {
+   background-image:   url(
+}*/
 
 /* start slideshow */
-#freedom-slide-text {
-   font-size:     120%;
+/*#freedom-slide-title {
+   padding-left:  30px;
+   font-size:     250%;
    text-align:    center;
    color:         white;
+}*/
+.slide-title {
+   width:600px;
+   float:right;
+   text-align:left;
+   color:white;
+   font-size:200%;
+}
+.slide-data {
+   width:600px;
+   float:right;
+   /*text-align:center;*/
+   color:white;
+   font-size:150%;
+}
+
+#freedom-slide-title {
+   width:600px;
+   float:right;
+   text-align:left;
+   color:white;
+   font-size:200%;
+}
+#freedom-slide-text {
+   width:600px;
+   float:right;
+   /*text-align:center;*/
+   color:white;
+   font-size:150%;
 }
 
 #finance-slide2-line-chart {
+   float:               right;
+   margin-right:        30px;
    background-color:    #00527b;
-   width:               250px;
-   height:              200px;
    color:               white;
    text-align:          center;
    vertical-align:      middle;
+   /*width:               250px;
+   height:              200px;
    padding-top:         50px;
-   font-size:           150px;
+   font-size:           150px;*/
+   width:               175px;
+   height:              140px;
+   padding-top:         35px;
+   font-size:           105px;
    border-radius:       50%;
 }
 /* end slideshow */

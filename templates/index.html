@@ -21,40 +21,52 @@
    </script>
 
    </br></br>
-   <div class='slideshow-container'>
+   <div class='slideshow-container' style='background-image:url({{static}}/assets/familycape/frontpage-blurry-orange-bg.jpg)'>
+      <a class="prev-slide" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next-slide" onclick="plusSlides(1)">&#10095;</a>
+
       </br>
-      <div class="slides-container">
-         <div class="mySlides fade">
+      <div class="slides-container" >
+
+         <div class="mySlides fade" id='slide1'>
             <div class="numbertext">1 / 3</div></br>
 
-            <div id='freedom-slide-text'>Financial freedom isn't a myth.
+            <!-- <img src="{{static}}/assets/familycape/frontpage-trav.png" class='slide-img' style='float:left'> -->
+            <img src="{{static}}/assets/familycape/frontpage-trav.png" style='left:10px;position:absolute;float:left'>
+            <div id='freedom-slide-title'>
+               Financial freedom isn't a myth.
             </div>
-
-            <img src="{{static}}/assets/familycape/frontpage-trav.png" class='slide-img'>
+            </br></br></br>
+            <div id='freedom-slide-text'>
+               Hello!  I’m Travis Jennings, Investment Advisor in Wesley Chapel. I want to help you build your financial future using effective tactics and safe strategies.
+            </div>
          </div>
 
          <div class="mySlides fade">
             <div class="numbertext">2 / 3</div></br>
-            <img src="{{static}}/assets/tmpfun/fun2.png" class='slide-img'>
+            <!-- <img src="{{static}}/assets/tmpfun/fun2.png" class='slide-img'> -->
+            <div class='slide-title'>Ready to Get Started?</div>
+            </br></br>
+            <div class='slide-data' style='padding-top:30px'>
+               Get my complimentary report, “Tax-Free Income with Life Insurance”, which will explain how you can use the tax benefits of some life insurance policies to create tax-free income.
+            </div>
 
             <i id='finance-slide2-line-chart' class="fa fa-line-chart fontawesome-icon circle-yes"></i>
          </div>
 
          <div class="mySlides fade">
             <div class="numbertext">3 / 3</div></br>
-            <img src="{{static}}/assets/tmpfun/fun3.jpg" class='slide-img'>
-            <div class="caption-text">Caption Three</div>
+            <!-- <img src="{{static}}/assets/tmpfun/fun3.jpg" class='slide-img'>
+            <div class="caption-text">Caption Three</div> -->
          </div>
       </div>
 
-      <a class="prev-slide" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next-slide" onclick="plusSlides(1)">&#10095;</a>
-
-      <div style="text-align:center">
+      <div style="text-align:center;bottom:0;position:absolute;left:50%;transform:translateX(-50%);">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
       </div>
+
    </div>
 
    <div id='div-featured-in'>

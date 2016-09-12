@@ -24,8 +24,10 @@
    transform:     translateX(-50%);
    float:         left;
    width:         95%;
-   max-width:     550px;
-   max-height:    600px;
+   /*max-width:     550px;
+   max-height:    600px;*/
+   max-width:     385px;
+   max-height:    420px;
    /*height:  300px;*/
 }
 

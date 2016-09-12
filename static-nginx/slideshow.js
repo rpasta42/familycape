@@ -4,6 +4,7 @@ $(function() {
    showSlides(slideIndex);
    $('.mySlides').hide();
    $('.captionText').hide();
+   $('.mySlides').css('display', '');
 
    function setSlideArrowColor(c) {
       $('.prev-slide, .next-slide').css('background-color', c);
