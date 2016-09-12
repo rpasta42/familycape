@@ -49,6 +49,11 @@ def thankyou():
                           static=STATIC_NGINX,
                           root=DOMAIN)
 
+@app.route(APP_ROOT + 'blog2')
+def blog():
+   return render_template('blog2.html',
+                          static=STATIC_NGINX,
+                          root=DOMAIN)
 
 @app.route('/<path:path>')
 def catch_all(path):
