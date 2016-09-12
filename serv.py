@@ -43,6 +43,13 @@ def about():
                           static=STATIC_NGINX,
                           root=DOMAIN)
 
+@app.route(APP_ROOT + 'thankyou')
+def thankyou():
+   return render_template('thankyou.html',
+                          static=STATIC_NGINX,
+                          root=DOMAIN)
+
+
 @app.route('/<path:path>')
 def catch_all(path):
    return render_template('error.html',

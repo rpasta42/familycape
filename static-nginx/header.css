@@ -11,6 +11,7 @@ html, body {
 }
 
 body {
+   background-color:    white;
    margin:              0;
    /*overflow-x:          hidden;
    overflow-y:          scroll;*/
@@ -44,7 +45,7 @@ a, a:link, a:visited, a:hover {
    font-weight:   20;
 }
 
-#header-cont {}
+#header-cont { background-color:#f6f6f6; }
 #header-top-info {
    color:               white;
    height:              44px;
@@ -67,6 +68,7 @@ a, a:link, a:visited, a:hover {
    height:              110px;
    padding:             10px;
    padding-bottom:      1px;
+   background-color:    #f6f6f6;
 }
 
 #family-cape-logo {
@@ -128,5 +130,4 @@ a, a:link, a:visited, a:hover {
    border-width:        0;
    border-top-width:    4px;
 }
-
 
