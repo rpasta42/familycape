@@ -52,7 +52,18 @@ $(function() {
       if (bad)
          $('#form-err').show();
       else {
-         first.val(''); last.val(''); email.val(''); phone.val(''); msg.val('');
+         var data = {
+            'first_name':     first.val(),
+            'last_name':      last.val(),
+            'email':          email.val(),
+            'phone':          phone.val(),
+            'message':        msg.val()
+         };
+         function success() {
+            first.val(''); last.val(''); email.val(''); phone.val(''); msg.val('');
+            window.location.href = 'https://familycape.com/thankyou';
+         }
+         $.post('https://familycape.com/submit', data, success);
 
       }
 
