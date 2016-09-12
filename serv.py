@@ -119,6 +119,5 @@ if __name__ == '__main__':
    priv = '%s/privkey.pem' % cert_path
 
    context = (pub, priv)
-   #app.run(ssl_context=context, host='0.0.0.0', debug=True, threaded=True, port=4219)
-   app.run(ssl_context=context, host='0.0.0.0', debug=True, threaded=False, port=4219)
+   app.run(ssl_context=context, host='0.0.0.0', debug=True, threaded=True, port=4219)
 
