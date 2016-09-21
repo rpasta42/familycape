@@ -46,12 +46,20 @@ a, a:link, a:visited, a:hover {
 }
 
 #header-cont { background-color:#f6f6f6; }
+#buz-logo {
+   width:               145px;
+}
+#buz-text {
+   display:             none;
+}
 #go-to-businesscape {
    position:            absolute;
    top:                 50%;
    transform:           translateY(-50%);
    right:               0;
    margin-right:        10px;
+   height:              80px;
+   width:               170px;
 }
 #header-top-info {
    color:               white;

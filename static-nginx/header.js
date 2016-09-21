@@ -32,6 +32,23 @@ $(document).ready(function() {
    setTimeout(fixNavWidth, 200);
    setTimeout(fixNavWidth, 500);
 
+   //$('#buz-text').css('display', '');
+   //$('#buz-text').hide();
+   $('#go-to-businesscape').click(function() {
+      window.location = 'http://businesscape.com/';
+   });
+
+   $('#go-to-businesscape').hover(function() { //btn-warning
+      $(this).addClass('btn-info');
+      $(this).removeClass('btn-primary');
+      $('#buz-logo').hide();
+      $('#buz-text').show();
+   }, function() {
+      $(this).addClass('btn-primary');
+      $(this).removeClass('btn-info');
+      $('#buz-logo').show();
+      $('#buz-text').hide();
+   });
 });
 
 

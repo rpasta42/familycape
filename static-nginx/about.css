@@ -35,31 +35,32 @@
 
 #bullet-points > div > a {
    color:               white;
-   /*box-shadow: 0px 0px 9px #000;*/
    background-color:    #005a87;
-   /*height:              11px;
-   width:               11px;*/
    font-size:           100%;
    padding:             5px;
    padding-left:        7px;
-   /*height:              23px;
-   width:               18px;*/
    border-radius:       50%;
    margin-right:        5px;
    margin-top:          10px;
-   /*padding:             5px;
+   /*box-shadow: 0px 0px 9px #000;
+   height:              11px;
+   width:               11px;
+   height:              23px;
+   width:               18px;
+   padding:             5px;
    padding-bottom:      8px;
    padding-left:        6px;
-   margin-right:        5px;*/
-   /*padding:             10px;
+   margin-right:        5px;
+   padding:             10px;
    padding-left:        7px;
    padding-bottom:      15px;
    padding-right:       15px;
-   padding:             10px;*/
-   /*display:             inline-block;
+   padding:             10px;
+   display:             inline-block;
    padding:             10px;
    font-size:           150%;*/
 }
+
 #bullet-points > div {
    margin:              10px;
 }
