@@ -15,7 +15,6 @@ $(function() {
    setTimeout(fixFooter, 500);
 
    $('#form-err').hide();
-   $('#bullet-points>div>a').addClass('fa fa-chevron-right');
 
    function onSubmitBtn() {
       var first = $('#form-first-name');
@@ -66,7 +65,6 @@ $(function() {
          $.post('https://familycape.com/submit', data, success);
 
       }
-
    }
 
    $('#form-submit-btn').click(onSubmitBtn);

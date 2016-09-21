@@ -46,6 +46,13 @@ a, a:link, a:visited, a:hover {
 }
 
 #header-cont { background-color:#f6f6f6; }
+#go-to-businesscape {
+   position:            absolute;
+   top:                 50%;
+   transform:           translateY(-50%);
+   right:               0;
+   margin-right:        10px;
+}
 #header-top-info {
    color:               white;
    height:              44px;

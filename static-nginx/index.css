@@ -59,18 +59,27 @@
 /* end slideshow */
 
 #div-featured-in {
-   height:              75px;
+   height:              85px; /*75px;*/
    background-color:    #00527B;
    position:            relative;
 }
 
-#featured-in-text, #featured-img1, #featured-img2 {
+#featured-in-text, #featured-img1, #featured-img2, #featured-img3 {
    position:            absolute;
    top:                 50%;
    transform:           translateY(-50%);
 }
 #featured-img1, #featured-img2 {
    height:              45px;
+}
+#featured-img3 {
+   width:               140px;
+   height:              99%;
+   right:               0;
+   padding-right:       5px;
+}
+#featured-img3:hover {
+   cursor:              pointer;
 }
 #featured-in-text {
    padding-left:        70px;
