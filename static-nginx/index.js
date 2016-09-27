@@ -1,5 +1,5 @@
 
-var vidFixerTimeout = 600;
+var vidFixerTimeout = 2000; //600;
 function vidFixer() {
    var vidWidth = $('#bottom-video').width();
    console.log(vidWidth);

@@ -94,20 +94,19 @@
    background-color: #717171;
 }
 /* Fading animation */
-.fade {
-   -webkit-animation-name: fade;
+.fade-kk {
+   -webkit-animation-name: fade-kk;
    -webkit-animation-duration: 1.5s;
-   animation-name: fade;
+   animation-name: fade-kk;
    animation-duration: 1.5s;
 }
-@-webkit-keyframes fade {
+@-webkit-keyframes fade-kk {
    from {opacity: .4}
    to {opacity: 1}
 }
-@keyframes fade {
+@keyframes fade-kk {
    from {opacity: .4}
    to {opacity: 1}
 }
-
 
 
