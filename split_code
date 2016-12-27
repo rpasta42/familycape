@@ -1,0 +1,412 @@
+
+goes in header.php after head, right at beginning of body. look for "kk was here"
+
+         <!-- kk -->
+<div id='kk-chooser' style='position:fixed;width:100%;height:100%;z-index:999000;top:0;left:0;display:none;'>
+   <title>Welcome to BusinessCape/FamilyCape</title>
+   <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+   <!-- Optional theme -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+   <!-- Latest compiled and minified JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+   <script>
+      function setCookie(cname, cvalue, exdays) {
+         var d = new Date();
+         d.setTime(d.getTime() + (exdays*24*60*60*1000));
+         var expires = "expires="+ d.toUTCString();
+         document.cookie = cname + "=" + cvalue + "; " + expires;
+      }
+
+      function getCookie(cname) {
+         var name = cname + "=";
+         var ca = document.cookie.split(';');
+         for(var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') {
+               c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+               return c.substring(name.length,c.length);
+            }
+         }
+         return "";
+      }
+
+      function resetCookie(cookieName) {
+         //document.cookie = '';
+         setCookie(cookieName, '', 0);
+      }
+
+      $(function() {
+         resetCookie('isBusiness');
+
+         var cookieVal = getCookie('isBusiness');
+         if (cookieVal == '') {
+            $('#kk-chooser').show();
+            //alert('not set');
+         }
+         else {
+            //alert('cookie: ' + cookieVal);
+            if (cookieVal == 'true') {
+               //window.location = 'http://businesscape.com/';
+               //$('#kk-chooser').hide();
+               //$('html').css('z-index', '-10000');
+            }
+            //if (cookieVal == 'false') window.location = 'https://familycape.com/';
+         }
+
+         var busId = '#btn-businesscape'; //'#left-tile'r
+         var famId = '#btn-familycape'; //'#right-tile'
+         $(busId).click(function() {
+            $('#kk-chooser').hide();
+            setCookie('isBusiness', true, 1);
+            //window.location = 'http://businesscape.com/';
+         });
+         $(famId).click(function() {
+            //setCookie('isBusiness', false, 1);
+            //$('html').hide().css('z-index', '-1000');
+            window.location = 'https://familycape.com/';
+         });
+
+         $('#btn-businesscape, #btn-familycape').addClass('btn-primary'); //btn-warning, btn-success
+
+         var cName = 'unhovered-tile';
+         $('.my-tile').hover(function() {
+            if ($(this).attr('id') == 'left-tile')
+               $('#right-tile').addClass(cName);
+            else $('#left-tile').addClass(cName);
+
+         }, function() {
+            $('.my-tile').removeClass(cName);
+         });
+
+         /*function fixTileBack() {
+            $('.my-tile').each(function() }
+               var width = $(this).find('.tile-front').width();
+               $(this).find('.tile-back').width(width);
+            });
+         }
+         setTimeout(fixTileBack, 0);
+         setTimeout(fixTileBack, 100);*/
+
+      });
+   </script>
+
+   <style>
+      #tile-container {
+          z-index:55 !important;
+      }
+      .tile-front, .tile-back { height: 100%; }
+      #kk-chooser, #kk-body {
+         color:   #8495a1;
+         height:  100%;
+         width:   100%;
+         overflow:hidden;
+      }
+      #left-tile {
+         background-color:                #fafafa; /*#5bc0de;*/
+         border-top-right-radius:         0;
+         border-bottom-right-radius:      0;
+      }
+      #right-tile {
+         background-color:                #fafafa;    /*#f1c954; #0e9d57;*/
+         left:                            50%;
+         border-top-left-radius:          0;
+         border-bottom-left-radius:       0;
+      }
+      .my-tile {
+         position:      absolute;
+         width:         50%;
+         height:        100%;
+         border-radius: 10px;
+         text-align:    center;
+         overflow:      hidden;
+         /*opacity:       0.9;
+         filter:        blur(3px);*/
+         border-style:  solid;
+         border-width:  1px;
+         border-color:  #8495a1;
+      }
+      #tile-container {
+         background-color:   #555;
+         border-radius: 10px;
+         position:      absolute;
+         height:        80%;
+         width:         80%;
+         left:          50%;
+         transform:     translateX(-50%);
+         /*margin:        auto;*/
+      }
+     .unhovered-tile-kk {
+         opacity:       0.9;
+         filter:        blur(3px);
+      }
+      .my-tile:hover {
+         /*opacity: 1;
+         filter:  none;*/
+         /*cursor:  pointer;*/
+      }
+      #kk-body {
+         padding:       0;
+         margin:        0;
+         /*background-color:    #f1c954;*/
+         background-color:    #eeeeee;
+      }
+      #tile-container {
+         /*position:      relative;
+         width:         100%;
+         height:        100%;*/
+      }
+      .tile-img {
+         width:         100%;
+         height:        100%;
+      }
+      #left-img-bottom {
+         height:        20px;
+      }
+      #right-img-top, #left-img-top, #left-back-logo, #right-back-logo {
+         /*width:         558px;
+         height:        200px;*/
+         max-height:    200px;
+         max-width:     558px;
+         width:         90%;
+         margin:        8px;
+         padding:       8px;
+      }
+      #left-img-bottom, #right-img-bottom {
+         height:        100%;
+      }
+      .desc-container {
+         width:         100%;
+         max-width:     /*350px;*/ 450px;
+         position:      absolute;
+         left:          50%;
+         transform:     translateX(-50%);
+         font-size:     150%;
+      }
+      .desc-txt {
+         padding:       15px;
+         margin:        5px;
+         padding-top:   0px;
+      }
+      #top-text {
+         text-align:    center;
+         font-size:     /*150%;*/ 3em;
+         color:         #8495a1;
+      }
+      #btn-businesscape, #btn-familycape {
+         margin-top:    8px;
+         width:         50%;
+         max-width:     250px;
+         min-width:     150px;
+      }
+   </style>
+
+   <style>
+         /*opacity:       0.9;
+         filter:        blur(3px);*/
+
+      @keyframes rotate-y-forward-90 {
+         from {transform: rotateY(0deg);  opacity: 1;  filter: blur(0px);}
+         to   {transform: rotateY(90deg); opacity: 0.1; filter: blur(3px);}
+      }
+      @keyframes rotate-y-backwards-90 {
+         from {transform: rotateY(90deg); opacity: 0; filter: blur(3px); }
+         to   {transform: rotateY(0deg);  opacity: 1; filter: blur(0px); }
+      }
+
+      @keyframes fade-out {
+         from {opacity:1; filter: blur(0px); -webkit-filter: blur(0px); }
+         to   {opacity:0.6; filter: blur(3px); -webkit-filter: blur(3px); }
+      }
+      @keyframes fade-in {
+         from {opacity:0.6; filter:blur(3px) -webkit-filter: blur(3px); }
+         to   {opacity:1; filter:blur(0px); -webkit-filter: blur(0px) }
+      }
+
+   </style>
+
+   <script>
+      var checkIfOutTime = 150;//400;
+      var tileRotTime = 0.2; //default:0.2; kinda slow: 0.5 //!!!USE 5.0 seconds for demo of fades
+      var fadeTime = 0.5;
+      var tileRotTimeMilli = tileRotTime * 1000;
+
+      function animate(el, animationName, duration) {
+         el.css('animation-name', animationName);
+         el.css('animation-duration', duration + 's');
+         el.css('animation-fill-mode', 'forwards');
+      }
+
+      $(function() {
+         $('.my-tile').find('.tile-front').show();
+         $('.my-tile').find('.tile-back').hide();
+
+         /* old
+         inactive = default
+         rotating90 = started rotation
+         rotating180 = finsihed half rotation
+         flipped_start = just finished flipping, need to wait before rotating back
+         flipped_ready = waited minimum amount, ready to rotate back
+         reversing = rotating back
+         inactive/finished = either use separate state, or just revert to inactive
+         status of rotation
+         (inactive, rotating90, rotating180, flipped_start, flipped-ready, reversing, inactive/finished)*/
+
+         //new statuses = [inactive, started-forward, started-reverse, flipped-ready]
+         var tileState = { 'left-tile':'inactive', 'right-tile':'inactive' };
+
+         /*function periodic() {
+            console.log('left hover: ' + $('#left-tile:hover').length);
+            console.log('right hover: ' + $('#right-tile:hover').length);
+            setTimeout(periodic, 1000);
+         }
+         periodic();*/
+
+         //t = hovered object, tId = 'left-tile' or 'right-tile'
+         function onMoveIn(t, tId, front, back) {
+            for (var tileId in tileState) {
+               if (tileState[tileId] != 'inactive') {
+                  //return;
+                  //setTimeout(function () { onMoveIn(t, tId, front, back); }, checkIfOutTime);
+                  function check() {
+                     if ($('#' + tId + ':hover').length != 0)
+                        onMoveIn(t, tId, front, back);
+                  }
+                  /*for (var i = 1; i < 2; i++) {
+                     setTimeout(check, checkIfOutTime*i);
+                  }*/
+                  setTimeout(check, checkIfOutTime*2);
+                  return;
+               }
+            }
+            /*if (tileState[tId] != 'inactive')
+               return;*/
+
+            animate(front, 'rotate-y-forward-90', tileRotTime);
+
+            if (tId == 'left-tile') {
+               animate($('#right-tile'), 'fade-out', fadeTime);
+            } else {
+               animate($('#left-tile'), 'fade-out', fadeTime);
+            }
+
+            tileState[tId] = 'started-forward';
+
+            setTimeout(function() {
+               front.hide();
+               back.show();
+               animate(back, 'rotate-y-backwards-90', tileRotTime);
+               setTimeout(function() {
+                  tileState[tId] = 'flipped-ready';
+                  function checkIfOut() {
+                     //if (!t.is(':hover'))
+                     if ($('#' + tId + ':hover').length == 0)
+                        onMoveOut(t, tId, front, back);
+                     else
+                        setTimeout(checkIfOut, checkIfOutTime);
+                  }
+                  checkIfOut();
+               }, tileRotTimeMilli);
+            }, tileRotTimeMilli);
+         }
+
+         function onMoveOut(t, tId, front, back) {
+            if (tileState[tId] != 'flipped-ready') {
+               /*setTimeout(function () { onMoveOut(t, tId, front, back); }, 400);
+               return;*/
+            }
+            tileState[tId] = 'started-reverse';
+            animate(back, 'rotate-y-forward-90', tileRotTime);
+
+            if (tId == 'left-tile') {
+               animate($('#right-tile'), 'fade-in', fadeTime);
+            } else {
+               animate($('#left-tile'), 'fade-in', fadeTime);
+            }
+
+            setTimeout(function() {
+               back.hide();
+               front.show();
+               animate(front, 'rotate-y-backwards-90', tileRotTime);
+
+               //delay is usually too long, so we remove timeOut which makes it possible to rotate 2 at a time
+               //setTimeout(function() { tileState[tId] = 'inactive'; }, tileRotTimeMilli*0.9);
+               tileState[tId] = 'inactive';
+            }, tileRotTimeMilli);
+         }
+
+         function onTileHover(obj, isHoverIn) {
+            var objId = $(obj).attr('id');
+            var back = $(obj).find('.tile-back');
+            var front = $(obj).find('.tile-front');
+            if (isHoverIn)
+               onMoveIn(obj, objId, front, back);
+            /*else
+               onMoveOut(obj, objId, front, back);*/
+         }
+
+         $('.my-tile').hover(function() {
+            onTileHover($(this), true);
+         }, function() {
+            onTileHover($(this), false);
+         });
+      });
+   </script>
+<div id='kk-body'>
+
+   <div id='top-text'>Select website to continue</div>
+   <!-- <center style='color:#8495a1'>Select website to continue</center> -->
+   </br>
+
+   <div id='tile-container' style='z-index:10;'>
+      <div id='left-tile' class='my-tile'>
+         <!-- <img class='tile-img' id='left-img' src='https://familyape.com/assets/businesscape1.png'> -->
+         <button id='btn-businesscape' class='btn'>Go to Business Cape</button>
+         <div class='tile-front'>
+            <img class='tile-img' id='left-img-top' src='https://familyape.com/assets/familycape/split-select/logo-businesscape.png'>
+            <img class='tile-img' id='left-img-bottom' src='https://familyape.com/assets/familycape/split-select/bus_scrot.png'>
+         </div>
+         <div class='tile-back'>
+            <img class='tile-img' id='left-back-logo' src='https://familyape.com/assets/familycape/split-select/logo-businesscape.png'>
+            <div class='desc-container'>
+               <div class='desc-txt'>
+                  At BusinessCape, we work with various-sized businesses to analyze costs and and optimize profits.
+
+                  2 Ways to Increase Profit!
+                  <ul>
+                     <li>Reduce Expenses</li>
+                     <li>Increase Revenue</li>
+                  </ul>
+                  We can help you reduce your debt and taxes.
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div id='right-tile' class='my-tile'>
+         <button id='btn-familycape' class='btn'>Go to Family Cape</button>
+         <div class='tile-front'>
+            <!-- <img class='tile-img' id='right-img' src='https://familyape.com/assets/familydebt1.png'> -->
+            <img class='tile-img' id='right-img-top' src='https://familyape.com/assets/familycape/logo.png'>
+            <img class='tile-img' id='right-img-bottom' src='https://familyape.com/assets/familycape/split-select/fam_scrot.png'>
+         </div>
+         <div class='tile-back'>
+            <img class='tile-img' id='right-back-logo' src='https://familyape.com/assets/familycape/logo.png'></br></br>
+            <div class='desc-container'>
+               <div class='desc-txt'>
+                  <!-- At FamilyCape, we specialize in working with families to minimize their debt, and pay it off as quickly as possible. -->
+                  We can show you how to get completely out of debt, including your mortgage, in 10 years or less without spending more than you’re currently spending.
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+        <!-- end kk -->
